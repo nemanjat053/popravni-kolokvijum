@@ -1,0 +1,80 @@
+{
+  "knjiga": [
+    {
+      "id": 1,
+      "naslov": "Kralj Edip",
+      "autor": "Sofokle",
+      "isbn": "0486268772"
+    },
+    {
+      "id": 2,
+      "naslov": "Do Androids Dream of Electric Sheep?",
+      "autor": "Philip K. Dick",
+      "isbn": "1407230026"
+    },
+    {
+      "id": 3,
+      "naslov": "Neuromancer",
+      "autor": "William Gibson",
+      "isbn": "0441569595"
+    },
+    {
+      "id": 4,
+      "naslov": "Dune",
+      "autor": "Frank Herbert",
+      "isbn": "0441172717"
+    }
+  ],
+  "iznajmljivanje": [
+    {
+      "id": 1,
+      "knjigaId": 1,
+      "clanId": 2,
+      "datumVraćanja": null,
+      "datumIznajmljivanja": "2020-02-06"
+    },
+    {
+      "id": 2,
+      "knjigaId": 4,
+      "clanId": 2,
+      "datumVraćanja": null,
+      "datumIznajmljivanja": "2020-02-06"
+    },
+    {
+      "id": 3,
+      "knjigaId": 2,
+      "clanId": 4,
+      "datumVraćanja": "2020-01-06",
+      "datumIznajmljivanja": "2020-01-01"
+    },
+    {
+      "id": 4,
+      "knjigaId": 4,
+      "clanId": 4,
+      "datumVraćanja": null,
+      "datumIznajmljivanja": "2020-04-26"
+    }
+  ],
+  "clan": [
+    {
+      "id": 1,
+      "ime": "Marko",
+      "prezime": "Petrović"
+    },
+    {
+      "id": 2,
+      "ime": "Petar",
+      "prezime": "Marković"
+    },
+    {
+      "id": 3,
+      "ime": "Slavica",
+      "prezime": "Pavlović"
+    },
+    {
+      "id": 4,
+      "ime": "Milan",
+      "prezime": "Marinković"
+    }
+  ]
+}

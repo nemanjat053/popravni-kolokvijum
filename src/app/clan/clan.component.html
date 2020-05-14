@@ -1,0 +1,38 @@
+<table class="table table-borderless" *ngFor="let clan of clanovi">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Ime</th>
+      <th>Prezime</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ clan.id }}</td>
+      <td>{{ clan.ime }}</td>
+      <td>{{ clan.prezime }}</td>
+      <td>
+        <button class="btn btn-primary">
+          <a
+            [routerLink]="['/clan', clan.id]"
+            routerLinkActive="router-link-active"
+            style="color: white;"
+            >Detail</a
+          >
+        </button>
+        <button class="btn btn-danger" (click)="deleteOne(clan.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-primary">
+  <a
+    [routerLink]="['/noviClan']"
+    routerLinkActive="router-link-active"
+    style="color: white;"
+    >Dodaj novog</a
+  >
+</button>

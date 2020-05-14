@@ -1,0 +1,29 @@
+<form [formGroup]="forma" (ngSubmit)="addNew()">
+  <div class="form-group">
+    <label>Knjiga Id : </label>
+    <br>
+    <select name="knjigaId" formControlName="knjigaId">
+      <option *ngFor="let knjiga of knjige" value="{{knjiga.id}}"> {{knjiga.naslov}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Clan Id : </label>
+    <br>
+    <select name="clanId" formControlName="clanId">
+      <option *ngFor="let clan of clanovi" value="{{clan.id}}"> {{clan.ime}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Datum iznajmljivanja : </label>
+    <input type="text" class="form-control" formControlName="datumIznajmljivanja" />
+  </div>
+
+  <div class="form-group">
+    <label>Datum vracanja : </label>
+    <input type="text" class="form-control" formControlName="datumVracanja" />
+  </div>
+
+  <button class="btn btn-primary">Dodaj</button>
+</form>

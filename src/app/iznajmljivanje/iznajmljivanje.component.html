@@ -1,0 +1,38 @@
+<table class="table table-borderless" *ngFor="let iznajmljivanje of iznajmljivanjeList">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>KnjigaId</th>
+        <th>ClanId</th>
+        <th>Datum Vracanja</th>
+        <th>Datum Iznajmljivanja</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ iznajmljivanje.id }}</td>
+        <td>{{ iznajmljivanje.knjigaId }}</td>
+        <td>{{ iznajmljivanje.clanId }}</td>
+        <td>{{ iznajmljivanje.datumVracanja }}</td>
+        <td>{{ iznajmljivanje.datumIznajmljivanja }}</td>
+        <td>
+          <button class="btn btn-primary">
+            <a
+              [routerLink]="['/iznajmljivanje', iznajmljivanje.id]"
+              routerLinkActive="router-link-active"
+              style="color: white;"
+              >Detail</a
+            >
+          </button>
+          <button class="btn btn-danger" (click)="deleteOne(iznajmljivanje.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <button class="btn btn-primary">
+    <a [routerLink]="['/novoIznaj']" routerLinkActive="router-link-active" style="color: white;" >Dodaj novo</a>
+  </button>
+  

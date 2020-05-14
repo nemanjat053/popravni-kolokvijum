@@ -1,0 +1,18 @@
+<h3>Edit clan</h3>
+<form (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="">Ime</label>
+    <input type="text" name="ime" class="form-control" [(ngModel)]="clan.ime" />
+  </div>
+  <div class="form-group">
+    <label for="">Prezime</label>
+    <input
+      type="text"
+      name="prezime"
+      class="form-control"
+      [(ngModel)]="clan.prezime"
+    />
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Izmijeni" />
+</form>

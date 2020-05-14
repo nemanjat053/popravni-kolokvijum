@@ -1,0 +1,38 @@
+<table
+  class="table table-borderless"
+  *ngFor="let knjiga of knjige"
+>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Naslov</th>
+      <th>Autor</th>
+      <th>Isbn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ knjiga.id }}</td>
+      <td>{{ knjiga.naslov }}</td>
+      <td>{{ knjiga.autor }}</td>
+      <td>{{ knjiga.isbn }}</td>
+      <td>
+        <button class="btn btn-primary">
+          <a
+            [routerLink]="['/knjiga', knjiga.id]"
+            routerLinkActive="router-link-active"
+            style="color: white;"
+            >Detail</a
+          >
+        </button>
+        <button class="btn btn-danger" (click)="deleteOne(knjiga.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-primary">
+  <a [routerLink]="['/novaKnjiga']" routerLinkActive="router-link-active" style="color: white;" >Dodaj novu</a>
+</button>

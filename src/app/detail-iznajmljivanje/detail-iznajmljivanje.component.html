@@ -1,0 +1,41 @@
+<h3>Edit iznajmljivanje</h3>
+<form (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="">Knjiga Id</label>
+    <input
+      type="text"
+      name="knjigaId"
+      class="form-control"
+      [(ngModel)]="iznaj.knjigaId"
+    />
+  </div>
+  <div class="form-group">
+    <label for="">Clan Id</label>
+    <input
+      type="text"
+      name="clanId"
+      class="form-control"
+      [(ngModel)]="iznaj.clanId"
+    />
+  </div>
+  <div class="form-group">
+    <label for="">Datum vracanja</label>
+    <input
+      type="text"
+      name="datumVracanja"
+      class="form-control"
+      [(ngModel)]="iznaj.datumVracanja"
+    />
+  </div>
+  <div class="form-group">
+    <label for="">Datum iznajmljivanja </label>
+    <input
+      type="text"
+      name="datumIznajmljivanja"
+      class="form-control"
+      [(ngModel)]="iznaj.datumIznajmljivanja"
+    />
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Izmijeni" />
+</form>
